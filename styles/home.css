@@ -1,0 +1,58 @@
+body {
+	overflow: hidden;
+	margin: 0;
+}
+
+.container {
+	margin: 0;
+	display: flex;
+	background-color: black;
+}
+
+
+.slider-container {
+	height: 100vh;
+	width: 50vw;
+	background-color: black;
+	z-index: 1
+}
+
+.slider-reverse-container {
+	height: 100vh;
+	width: 50vw;
+	background-color: black;
+	z-index: 2;
+}
+
+img {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	transition: top;
+	transition-duration: 3s;
+}
+
+.image {
+	top: 100vh;
+	display: flex;
+	flex: 1;
+}
+
+.image-reverse {
+	top: -100vh;
+	display: flex;
+	flex: 1;
+	object-position: -50vw top;
+}
+
+.active {
+	top: 0vh;
+}
+
+.dormant {
+	top: -100vh;
+}
+
+.dormant-reverse {
+	top: 100vh;
+}
