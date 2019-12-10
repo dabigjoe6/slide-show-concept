@@ -1,10 +1,18 @@
-const TRANSITION_TIME = 5000;
+const TRANSITION_TIME = 4000;
 
 $(document).ready(function () {
+
+
+	let transitionDuration = TRANSITION_TIME - 2000;
+	$('img').css('transition-duration', `${transitionDuration}ms`);
+
 	let images = $('.slider-container').children();
 	let reverseImages = $('.slider-reverse-container').children();
 
+	//transition individual image
 	function transitionImage(index) {
+
+		//change top position of images
 		$(images[index]).addClass('active');
 		$(reverseImages[index]).addClass('active');
 
@@ -30,6 +38,7 @@ $(document).ready(function () {
 		}, TRANSITION_TIME + 3100)
 	}
 
+	//start transition of every single image at interval of TRANSITION_TIME
 	let index = 0;
 	setInterval(() => {
 		if (index >= images.length) {
